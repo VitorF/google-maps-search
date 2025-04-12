@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimapa de Farmácias</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Farmácias Próximas</h1>
+        </header>
+        
+        <div class="controls">
+            <button id="locate-me" class="btn">Minha Localização</button>
+            <div class="radius-control">
+                <span>Raio: <span id="radius-value">500</span>m</span>
+                <input type="range" id="radius-slider" min="100" max="2000" step="100" value="500">
+            </div>
+        </div>
+        
+        <div id="mini-map"></div>
+        
+        <div id="pharmacy-list">
+            <h2>Farmácias Encontradas (<span id="count">0</span>)</h2>
+            <ul id="places"></ul>
+            <div id="loading">Buscando farmácias próximas...</div>
+            <div id="no-results">Nenhuma farmácia encontrada neste raio.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
+    </script>
+</body>
+</html>
+

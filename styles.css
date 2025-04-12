@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #4285f4;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #3367d6;
+}
+
+.radius-control {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+#radius-slider {
+  width: 100%;
+  cursor: pointer;
+}
+
+#mini-map {
+  height: 250px;
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+#pharmacy-list {
+  margin-top: 15px;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #4285f4;
+}
+
+#places {
+  list-style-type: none;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.pharmacy-item {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pharmacy-item:hover {
+  background-color: #f5f5f5;
+}
+
+.pharmacy-item:last-child {
+  border-bottom: none;
+}
+
+.pharmacy-name {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.pharmacy-address {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.pharmacy-distance {
+  font-size: 0.8rem;
+  color: #4285f4;
+  margin-top: 3px;
+}
+
+.pharmacy-rating {
+  color: #fbbc05;
+  font-size: 0.8rem;
+  margin-top: 3px;
+}
+
+#loading,
+#no-results {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+#no-results {
+  display: none;
+}
+
+.user-marker {
+  color: blue;
+  font-size: 24px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  #mini-map {
+    height: 200px;
+  }
+}
+
